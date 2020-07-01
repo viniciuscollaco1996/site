@@ -1,0 +1,65 @@
+.um{
+	width: 100px;
+	height: 100px;
+	background-color: #ff0000;	
+	transition: width 2s, height 4s; /*transação de 2 segundos*/ /*a virgula é importante*/
+	transition-delay: 1s; /*ele da uma esperada*/
+}
+.um:hover{ /*quando passamos o mouse em cima ele movimenta para largura e altura*/
+	width: 300px; 
+	height: 300px;
+}	
+.dois{
+	width: 100px;
+	height: 100px;
+	background-color: #6A5ACD;	
+	transition: width 2s;
+	transition-timing-function: ease-in-out; /*suaviza a transação*/
+	/*transition-timing-function: ease-in;*//*ease-in suaviliza a saida */
+	/*transition-timing-function: ease-in-out;*//*ease-in-out suaviliza a saida e a chegada */
+}	
+.dois:hover{
+	width: 300px;
+}	
+.tres{
+	width: 100px;
+	height: 100px;
+	background-color: #8B4513;	
+	transition: width 2s, height 2s, transform 2s;
+}	
+.tres:hover{
+	width: 300px;
+	height: 300px;	
+	transform: rotate(180deg); /*faz ele girar*/
+}	
+.quatro{
+	width: 100px;
+	height: 100px;
+	background-color: #000000;
+	animation-name: exemplo;/*ela precisa ter um nome, tomar cuidado para ser diferente*/
+	animation-duration: 4s; /*duração para fazer*/
+}	
+/*como sera feito a animação: precisa chamar com @*/
+@keyframes exemplo{ /*pode ficar meio estranho aqui no notepad++*/
+	from{background-color: #00ffff;} /*faz uma mudança de cor*/
+	to{background-color: #000000;} /*aqui seria dois pontos, começo e fim*/
+}	
+.cinco{
+	width: 100px;
+	height: 100px;
+	background-color: #FFA500;
+	animation-name: outroexemplo;
+	animation-duration: 4s;
+	position: relative; /*para dar a movimentação no quadrado*//*ele faz as medidas para se comprir*/
+}	
+@keyframes outroexemplo{ /*aqui quando tem varios intervalos*/
+	0%{background-color: #FFA500; left: 0px; top: 0px;} /*as dimenções que ele vai*/
+	25%{background-color: #00ff00; left: 200px; top: 0px;}/*as dimenções que ele vai*/
+	50%{background-color: #0000ff; left: 200px; top: 200px;} /*as dimenções que ele vai*/
+	100%{background-color: #FFA500; left: 0px; top: 0px;} /*as dimenções que ele vai*/	
+}	
+
+
+
+
+
